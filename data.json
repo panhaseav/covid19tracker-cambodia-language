@@ -1,0 +1,282 @@
+{
+    "ភ្នំពេញ": [
+        {
+            "date": "2020-6-12",
+            "confirmed": 31,
+            "deaths": 0,
+            "recovered": 30
+        },
+        {
+            "date": "2020-6-13",
+            "confirmed": 31,
+            "deaths": 0,
+            "recovered": 30
+        },
+        {
+            "date": "2020-6-14",
+            "confirmed": 33,
+            "deaths": 0,
+            "recovered": 30
+        }
+        ],
+    "បាត់ដំបង" : [
+        {
+            "date": "2020-6-12",
+            "confirmed": 8,
+            "deaths": 0,
+            "recovered": 8
+        },
+        {
+            "date": "2020-6-13",
+            "confirmed": 8,
+            "deaths": 0,
+            "recovered": 8
+        },
+        {
+            "date": "2020-6-14",
+            "confirmed": 8,
+            "deaths": 0,
+            "recovered": 8
+        }     
+    ],
+    "កំពង់ចាម": [
+        {
+            "date": "2020-6-12",
+            "confirmed": 16,
+            "deaths": 0,
+            "recovered": 16
+        },
+        {
+            "date": "2020-6-13",
+            "confirmed": 16,
+            "deaths": 0,
+            "recovered": 16
+        },
+        {
+            "date": "2020-6-14",
+            "confirmed": 16,
+            "deaths": 0,
+            "recovered": 16
+        }
+    ],
+    "កំពត": [
+        {
+            "date": "2020-6-12",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+        },
+        {
+            "date": "2020-6-13",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+        },
+        {
+            "date": "2020-6-14",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2
+        }
+        
+    ],
+    "កែប": [
+        {
+            "date": "2020-6-12",
+            "confirmed": 4,
+            "deaths": 0,
+            "recovered": 4  
+        },
+        {
+            "date": "2020-6-13",
+            "confirmed": 4,
+            "deaths": 0,
+            "recovered": 4  
+        },
+        {
+            "date": "2020-6-14",
+            "confirmed": 4,
+            "deaths": 0,
+            "recovered": 4
+        }
+    ],
+    "ព្រះសីហនុ": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 40,
+            "deaths": 0,
+            "recovered": 40  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 40,
+            "deaths": 0,
+            "recovered": 40 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 40,
+            "deaths": 0,
+            "recovered": 40  
+         }
+        
+    ],
+    "សៀមរាប": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 7,
+            "deaths": 0,
+            "recovered": 7  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 7,
+            "deaths": 0,
+            "recovered": 7 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 7,
+            "deaths": 0,
+            "recovered": 7  
+         }
+        
+    ],
+    "ព្រ៖វិហារ": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+         }
+        
+    ],
+    "ត្បូងឃ្មុំ": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 4,
+            "deaths": 0,
+            "recovered": 4 
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 4,
+            "deaths": 0,
+            "recovered": 4
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 4,
+            "deaths": 0,
+            "recovered": 4 
+         }
+        
+    ],
+    "កេា៖កុង": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+         }
+        
+    ],
+    "កណ្តាល": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 2,
+            "deaths": 0,
+            "recovered": 2  
+         }
+        
+    ],
+    "បន្ទាយមានជ័យ": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 5,
+            "deaths": 0,
+            "recovered": 5  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 5,
+            "deaths": 0,
+            "recovered": 5 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 5,
+            "deaths": 0,
+            "recovered": 5  
+         }
+        
+    ],
+    "កំពង់ឆ្នាំង": [
+         {
+            "date": "2020-6-12",
+            "confirmed": 3,
+            "deaths": 0,
+            "recovered": 3  
+         },
+         {
+            "date": "2020-6-13",
+            "confirmed": 3,
+            "deaths": 0,
+            "recovered": 3 
+         },
+         {
+            "date": "2020-6-14",
+            "confirmed": 3,
+            "deaths": 0,
+            "recovered": 3 
+         }
+        
+        
+    ] 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+}

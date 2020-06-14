@@ -1,4 +1,4 @@
-<?php include "logic.php";?>
+<?php include "logic_k.php"; ?>
 
 
 
@@ -15,37 +15,57 @@
     <script src="https://kit.fontawesome.com/d5bb9eeccc.js" crossorigin="anonymous"></script>
     <script src= "https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
     <script src= "https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
+    <script src= "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.css"></script>
+    <script src= "https://cdn.datatables.net/1.10.21/css/dataTables.bootstrap4.min.css"></script>
+    
      <script>
-        $(document).ready(function() {
-    $('#table').DataTable({
-         // this gives option for changing the number of records shown in the UI table
 
-    })
-            ;
-        } );
+         
+    dTable = $('#myTable').DataTable({
+        "bLengthChange": false,
+        "lengthMenu": [20],
+        "columnDefs": [{
+                "className": "dt-center",
+                "targets": "_all"
+            }
+            ]
+             
+    });
+        $('#mySearchButton').on( 'keyup click', function () {
+    dTable.search($('#mySearchText').val()).draw();
+  } );
+} );
         
     </script>
-    <style>    
-        #table_filter input {
-      border-radius: 5px;
-            margin:center;
+    <style>
+        .p1{
+            text-align: center;
+            font-size: 20px;  
+        }
+        #navbar{
+            background-color: aqua; 
+        }
     </style>
-
+    
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark" id = "navbar">
   <a class="navbar-brand" href="#">
 សូមស្វាគមន៍</a>
   <ul class="navbar-nav mr-auto">
      <li class="nav-item active">
-        <a class="nav-link" href="index_k.php">ប្រទេសកម្ពុជា <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="index.php">ទំព័រដើម <span class="sr-only">(current)</span></a>
       </li>
     </ul>
 </nav>
 <body>
+    
+
     <div class = "container-fluid bg-light p-5 text-center my-3">
-        <h1>វេបសាយតាមដានជំងីកូវីដ១៩</h1>
+        <h1>វេបសាយតាមដានជំងឺកូវីដ១៩</h1>
         <h5 class = "text-muted">ប្រព័ន្ធអាប់ដេតរាល់ថ្ងែ</h5>
     </div>
+<!--  DATA FOR THE TOTAL RECOVERY IN CAMBODIA  -->
+
     <div class = "container my-5">
         <div class = "row text-center">
             <div class = "col-4 text-warning">
@@ -62,21 +82,27 @@
             </div>
         </div>
     </div>
+
     <div class = "container bg-light p-3 my-3 text-center">
         <h5 class = "text-info">យេីងរួមគ្នាប្រឆាំងមេរេាគកូវីដ១៩</h5>
-        <p class = "text-info">តាមការណែនាំរបស់ក្រសូងសុខាភិបាល</p>
+        <p class = "text-info">តាមការណែនាំរបស់ក្រសួងសុខាភិបាល</p>
     </div>
     <div class = "container-fluid">
-       <p1><?php echo $value[$days_count_prev]['date']; ?></p1>
-       <div class = "search-button">
-            <a href="index.php">ថ្ងៃនេះ</a>
+      <div class = "p1">
+       <p1><?php echo "ថែ្ង/ខែ/ឆ្នាំ :" .  $value[$days_count]['date']; ?></p1>
        </div>
-
+<!-- For yesterday      -->
+<!--
+       <div class = "search-button">
+            <a href="index_yesterday.php">
+ម្សិលមិញ</a>
+       </div>
+-->
         <div class = "table-responsive">
-            <table class = "table" id = "table">
+            <table class = "table" id= "myTable">
             <thead class ="thead-dark">
                 <tr>
-                    <th scope = "col">ប្រទេស</th>
+                    <th scope = "col">ទីក្រុង</th>
                     <th scope = "col">ចំនួនអ្នកឆ្លង</th>
                     <th scope = "col">ចំនួនអ្នកជាសះស្បើយ</th>
                     <th scope = "col">ចំនួនអ្នកស្លាប់</th>
@@ -85,28 +111,44 @@
             </thead>
             <tbody>
                 <?php 
+                
                 foreach($data as $key => $value){
-                    $active_cases = $value[$days_count_prev]['confirmed'] - $value[$days_count_prev]['recovered'] - $value[$days_count_prev]['deaths'] ;
-                    
+                    $increase = $value[$days_count]['confirmed'] - $value[$days_count_prev]['confirmed'];
+                    $increase_recover = $value[$days_count]['recovered'] - $value[$days_count_prev]['recovered'];
+                    $increase_deaths = $value[$days_count]['deaths'] - $value[$days_count_prev]['deaths'];
+                    //for active case
+                   $active_cases = $value[$days_count]['confirmed'] - $value[$days_count]['recovered'] - $value[$days_count]['deaths'] ;
+
                 ?>
+                <!-- Search form -->
+
                 <tr>
                     <th><?php echo $key ?></th>
                     <td>
-                        <?php echo $value[$days_count_prev]['confirmed']; ?>
-
+                        <?php echo $value[$days_count]['confirmed']; ?>
+                        <?php if ($increase !=0){ ?>
+                        <small class = "text-danger" pl-5><i class = "fas fa-arrow-up"></i><?php echo $increase; ?></small>
+                        <?php } ?>
                     </td> 
                     <td>
-                        <?php echo $value[$days_count_prev]['recovered']; ?>
-
+                       
+                        <?php echo $value[$days_count]['recovered']; ?>
+                        <?php if ($increase_recover !=0){ ?>
+                        <small class = "text-danger" pl-5><i class = "fas fa-arrow-up"></i><?php echo $increase_recover; ?></small>
+                        <?php } ?>
                     </td>
                     <td>
-                        <?php echo $value[$days_count_prev]['deaths']; ?>
-
+                        <?php echo $value[$days_count]['deaths']; ?>
+                        <?php if ($increase_deaths != 0 ){ ?>
+                        <small class = "text-danger" pl-5><i class = "fas fa-arrow-up"></i><?php echo $increase_deaths; ?></small>
+                        <?php } ?>
                     </td>
-                     <td>
-                        <?php echo $active_cases; ?>
 
+                    <td>
+                       <?php echo $active_cases; ?>
                     </td>
+ 
+
                 </tr>
                 <?php } ?>
             </tbody>
